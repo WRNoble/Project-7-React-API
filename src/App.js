@@ -21,7 +21,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:4000")
+    fetch("https://roman-emperors-ga-api.herokuapp.com/")
       .then(res => res.json())
       .then(
         (result) => {
