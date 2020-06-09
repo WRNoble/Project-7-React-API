@@ -1,8 +1,12 @@
 import React from 'react'
 
-function Content(){
+function Content(props){
+    console.log(props)
     return(
-        <p>content</p>
+    <div>
+        <h2>{props.name}</h2>
+        <img src ={props.image_url} alt="" />
+    </div>
     )
 }
 
