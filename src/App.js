@@ -8,8 +8,9 @@ import DeleteButton from './delete-button';
 import EditButton from './edit-button';
 import CreateButton from './create-button';
 import Axios from 'axios';
-
-let emperors = [];
+import CreateForm from './create-form';
+import DeleteForm from './delete-form';
+import EditForm from './edit-form';
 
 class App extends React.Component {
   constructor(props) {
@@ -80,6 +81,9 @@ class App extends React.Component {
               </ul>
             </div>
           ))}
+          <CreateForm />
+          <DeleteForm />
+          <EditForm />
           <Footer />
         </div>
         

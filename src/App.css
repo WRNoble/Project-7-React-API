@@ -37,13 +37,8 @@
   }
 }
 
-.master {
-  display: Flex
-}
 
 .card {
-  flex-direction: row;
-  flex-wrap: wrap;
   max-width: 200px;
   max-height: 200px;
 }

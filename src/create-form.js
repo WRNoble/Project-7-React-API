@@ -18,33 +18,60 @@ const CreateForm = () => {
     },
   });
   return (
-    <form onSubmit={formik.handleSubmit}>
-      <label htmlFor="firstName">First Name</label>
-      <input
-        id="firstName"
-        name="firstName"
-        type="text"
-        onChange={formik.handleChange}
-        value={formik.values.firstName}
-      />
-      <label htmlFor="lastName">Last Name</label>
-      <input
-        id="lastName"
-        name="lastName"
-        type="text"
-        onChange={formik.handleChange}
-        value={formik.values.lastName}
-      />
-      <label htmlFor="email">Email Address</label>
-      <input
-        id="email"
-        name="email"
-        type="email"
-        onChange={formik.handleChange}
-        value={formik.values.email}
-      />
-      <button type="submit">Submit</button>
-    </form>
+    <div>
+        <h2>Create Emperor</h2>
+        <form onSubmit={formik.handleSubmit}>
+        <label htmlFor="name">name</label>
+        <input
+            id="name"
+            name="name"
+            type="text"
+            onChange={formik.handleChange}
+            value={formik.values.name}
+        />
+        <label htmlFor="birth">birth</label>
+        <input
+            id="birth"
+            name="birth"
+            type="text"
+            onChange={formik.handleChange}
+            value={formik.values.birth}
+        />
+        <label htmlFor="birthProvidene">Birth Providence</label>
+        <input
+            id="birthProvidence"
+            name="birthProvidence"
+            type="text"
+            onChange={formik.handleChange}
+            value={formik.values.birthProvidence}
+        />
+        <label htmlFor="rise">rise</label>
+        <input
+            id="rise"
+            name="rise"
+            type="text"
+            onChange={formik.handleChange}
+            value={formik.values.rise}
+        />
+        <label htmlFor="dynasty">Dynasty</label>
+        <input
+            id="dynasty"
+            name="dynasty"
+            type="text"
+            onChange={formik.handleChange}
+            value={formik.values.dynasty}
+        />
+        <label htmlFor="causeOfDeath">Cause of Death</label>
+        <input
+            id="causeOfDeath"
+            name="causeOfDeath"
+            type="text"
+            onChange={formik.handleChange}
+            value={formik.values.causeOfDeath}
+        />
+        <button type="submit">Submit</button>
+        </form>
+    </div>
   );
 };
 
