@@ -18,20 +18,18 @@ const DeleteForm = () => {
     },
   });
   return (
-    <div>
-        <h2>Delete Emperor</h2>
-        <form onSubmit={formik.handleSubmit}>
-        <label htmlFor="name">name</label>
-        <input
-            id="name"
-            name="name"
-            type="text"
-            onChange={formik.handleChange}
-            value={formik.values.name}
-        />
-        <button type="submit">Submit</button>
-        </form>
-    </div>
+    <form onSubmit={formik.handleSubmit}>
+        <h2>Delete an Emperor</h2>
+      <label htmlFor="name">name</label>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        onChange={formik.handleChange}
+        value={formik.values.name}
+      />
+      <button type="submit">Submit</button>
+    </form>
   );
 };
 

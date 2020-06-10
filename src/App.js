@@ -7,11 +7,12 @@ import Footer from './footer';
 import DeleteButton from './delete-button';
 import EditButton from './edit-button';
 import CreateButton from './create-button';
-import Axios from 'axios';
+import axios from 'axios';
 import CreateForm from './create-form';
 import DeleteForm from './delete-form';
 import EditForm from './edit-form';
 import GetRequest from './axios';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class App extends React.Component {
       .then(res => res.json())
       .then(
         (result) => {
-          //console.log(result)
+          console.log(result)
           this.setState({
             isLoaded: true,
             emperors: result
@@ -46,9 +47,8 @@ class App extends React.Component {
 
   render() {
     const emperors = this.state.emperors;
-    //console.log(emperors);
+    console.log(emperors);
     let error = this.state.error
-    let isLoaded = this.state.isLoaded
     if (error) {
       return <div>Error: {error.message}</div>;
     } else {
@@ -57,10 +57,10 @@ class App extends React.Component {
         <div className="master">
           <Header />
           {emperors.map(emperor => (
-            <div class="card">
+            <div className="card">
               <ul>
                 <li>
-                  `Name: ${emperor.name}`
+                  {emperor.name}
                 </li>
                 <li>
                   {emperor.birth} 
@@ -83,7 +83,6 @@ class App extends React.Component {
           <CreateForm />
           <DeleteForm />
           <EditForm />
-          <GetRequest />
           <Footer />
         </div>
         
