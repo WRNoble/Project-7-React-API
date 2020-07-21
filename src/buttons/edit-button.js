@@ -3,9 +3,9 @@ import Button from 'react-bootstrap/Button';
 
 function EditButton() {
     return(
-        <button>
+        <Button>
             <p>Edit an Emperor</p>
-        </button>
+        </Button>
     )
 }
 

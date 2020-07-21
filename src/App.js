@@ -1,94 +1,25 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Header from './header';
-import Content from './content';
-import Footer from './footer';
-import DeleteButton from './delete-button';
-import EditButton from './edit-button';
-import CreateButton from './create-button';
-import axios from 'axios';
-import CreateForm from './create-form';
-import DeleteForm from './delete-form';
-import EditForm from './edit-form';
-import GetRequest from './axios';
+import React from "react";
+import "./App.css";
+import Header from "./component/header";
+import Footer from "./component/footer";
+//import Content from "./content";
+import CreateButton from "./buttons/create-button";
+import axios from "axios";
+import CreateForm from "./forms/create-form";
+import DeleteForm from "./forms/delete-form";
+import EditForm from "./forms/edit-form";
+import GetRequest from "./axios";
+import CardInfo from "./component/CardInfo";
+import CardName from "./component/CardName";
 
-
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    
-    this.state = {
-      error: null,
-      isLoaded: false,
-      emperors: []
-    };
-  }
-
-  componentDidMount() {
-    fetch("https://roman-emperors-ga-api.herokuapp.com/")
-      .then(res => res.json())
-      .then(
-        (result) => {
-          console.log(result)
-          this.setState({
-            isLoaded: true,
-            emperors: result
-          });
-        },
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      )
-  }
-
-  render() {
-    const emperors = this.state.emperors;
-    console.log(emperors);
-    let error = this.state.error
-    if (error) {
-      return <div>Error: {error.message}</div>;
-    } else {
-      return (
-        
-        <div className="master">
-          <Header />
-          {emperors.map(emperor => (
-            <div className="card">
-              <ul>
-                <li>
-                  {emperor.name}
-                </li>
-                <li>
-                  {emperor.birth} 
-                </li>
-                <li>
-                  {emperor.birthProvidence} 
-                </li>
-                <li>
-                  {emperor.rise} 
-                </li>
-                <li>
-                  {emperor.dynasty} 
-                </li>
-                <li>
-                  {emperor.causeOfDeath} 
-                </li>
-              </ul>
-            </div>
-          ))}
-          <CreateForm />
-          <DeleteForm />
-          <EditForm />
-          <Footer />
-        </div>
-        
-      );
-    }
-  }
+function HomePage(props) {
+  return (
+    <div>
+      <Header />
+      <CardInfo />
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default HomePage;

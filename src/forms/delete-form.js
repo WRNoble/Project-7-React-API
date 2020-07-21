@@ -6,12 +6,7 @@ const DeleteForm = () => {
   const formik = useFormik({
     initialValues: {
       name: '',
-      birth: '',
-      birthProvidence: '',
-      rise: '',
-      reignStart: '',
-      dynasty: '',
-      causeOfDeath: ''
+      required: true
     },
     onSubmit: values => {
       alert(JSON.stringify(values, null, 2));

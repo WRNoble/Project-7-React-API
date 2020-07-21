@@ -3,9 +3,9 @@ import Button from 'react-bootstrap/Button';
 
 function DeleteButton() {
     return(
-        <button>
+        <Button>
             <p>Delete an Emperor</p>
-        </button>
+        </Button>
     )
 }
 
