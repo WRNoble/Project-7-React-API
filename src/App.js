@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Header from "./component/header";
-import Footer from "./component/footer";
+
 //import Content from "./content";
 import CreateButton from "./buttons/create-button";
 import axios from "axios";
@@ -17,7 +17,6 @@ function HomePage(props) {
     <div>
       <Header />
       <CardInfo />
-      <Footer />
     </div>
   );
 }

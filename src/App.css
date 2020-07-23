@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+body {
+  background-color: rgba(240, 14, 14, 0.904);
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -37,7 +41,35 @@
   }
 }
 
+header {
+  color: white;
+  background-color: black;
+}
+
+image {
+  display: inherit;
+}
+
 .card {
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 277px;
+  min-height: 450px;
+}
+
+.name {
+  text-align: center;
+}
+
+button {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  color: white;
+  background-color: black;
+  margin-top: 0px;
+  padding-top: 0px;
 }
