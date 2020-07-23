@@ -1,16 +1,11 @@
 import React from "react";
 import "./App.css";
 import Header from "./component/header";
-
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 //import Content from "./content";
-import CreateButton from "./buttons/create-button";
 import axios from "axios";
-import CreateForm from "./forms/create-form";
-import DeleteForm from "./forms/delete-form";
-import EditForm from "./forms/edit-form";
 import GetRequest from "./axios";
 import CardInfo from "./component/CardInfo";
-import CardName from "./component/CardName";
 
 function HomePage(props) {
   return (
