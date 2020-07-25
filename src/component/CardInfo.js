@@ -45,7 +45,10 @@ class CardInfo extends Component {
         <div className="Container justify-content-center row align-items-center">
           <div className="row">
             {emperors.map((emperor) => (
-              <div className="card d-inline-block m-5 Container">
+              <div
+                className="card d-inline-block m-5 Container"
+                key={emperor.name}
+              >
                 <h2 className="justify-content-center name">{emperor.name}</h2>
                 <img
                   src={emperorPic}

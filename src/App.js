@@ -2,7 +2,6 @@ import React from "react";
 import "./App.css";
 import Header from "./component/header";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-//import Content from "./content";
 import axios from "axios";
 import GetRequest from "./axios";
 import CardInfo from "./component/CardInfo";
