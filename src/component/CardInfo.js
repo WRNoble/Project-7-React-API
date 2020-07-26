@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { render } from "@testing-library/react";
 import emperorPic from "../image/emperor.jpg";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import EditPage from "../pages/EditEmperor";
 
 class CardInfo extends Component {
   constructor(props) {
@@ -19,7 +20,6 @@ class CardInfo extends Component {
       .then((res) => res.json())
       .then(
         (result) => {
-          console.log(result);
           this.setState({
             isLoaded: true,
             emperors: result,
@@ -36,7 +36,6 @@ class CardInfo extends Component {
 
   render() {
     const emperors = this.state.emperors;
-    console.log(emperors);
     let error = this.state.error;
     if (error) {
       return <div>Error: {error.message}</div>;
@@ -64,9 +63,18 @@ class CardInfo extends Component {
                   <li>Cause of Death:{emperor.causeOfDeath}</li>
                 </ul>
                 <div>
-                  <button className="justify-content-center mr-5 btn-dark">
-                    Edit
-                  </button>
+                  <Router>
+                    <button>
+                      <Link
+                        className="justify-content-center mr-5 btn-dark"
+                        to="/edit"
+                        target="blank"
+                      >
+                        Edit
+                      </Link>
+                    </button>
+                    <Route path="/edit" exact render={() => <EditPage />} />
+                  </Router>
                 </div>
               </div>
             ))}

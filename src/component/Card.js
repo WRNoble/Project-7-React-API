@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { render } from "@testing-library/react";
 
-function Card(props) {
+function Card() {
   return (
     <div className="card d-inline-block m-5">
       <ul>
